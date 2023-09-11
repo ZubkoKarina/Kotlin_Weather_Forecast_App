@@ -53,19 +53,18 @@ class ForeCastAdapter : RecyclerView.Adapter<ForeCastHolder>() {
                 holder.smallIcon.setImageResource(R.drawable.ic_sun)
             }
             if (i.icon == "01n") {
-                holder.imageGraphic.setImageResource(R.drawable.ic_sun)
-                holder.smallIcon.setImageResource(R.drawable.ic_sun)
+                holder.imageGraphic.setImageResource(R.drawable.ic_moon)
+                holder.smallIcon.setImageResource(R.drawable.ic_moon)
             }
             if (i.icon == "02d") {
-                holder.imageGraphic.setImageResource(R.drawable.twod)
-                holder.smallIcon.setImageResource(R.drawable.twod)
+                holder.imageGraphic.setImageResource(R.drawable.ic_cloudy)
+                holder.smallIcon.setImageResource(R.drawable.ic_cloudy)
             }
             if (i.icon == "02n") {
-                holder.imageGraphic.setImageResource(R.drawable.twon)
-                holder.smallIcon.setImageResource(R.drawable.twon)
+                holder.imageGraphic.setImageResource(R.drawable.ic_night_moon_moon)
+                holder.smallIcon.setImageResource(R.drawable.ic_night_moon_moon)
             }
             if (i.icon == "03d" || i.icon == "03n") {
-
                 holder.imageGraphic.setImageResource(R.drawable.threedn)
                 holder.smallIcon.setImageResource(R.drawable.threedn)
             }

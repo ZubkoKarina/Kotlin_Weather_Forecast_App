@@ -1,6 +1,5 @@
 package com.example.weather_forecast_app
 import android.app.Application
-
 class MyApplication : Application()   {
     companion object{
         lateinit var instance : MyApplication

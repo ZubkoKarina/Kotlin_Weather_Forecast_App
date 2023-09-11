@@ -1,5 +1,5 @@
 
-package com.example.weatherapp.adapter
+package com.example.weather_forecast_app.adapter
 import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,8 +10,8 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.weatherapp.R
-import com.example.weatherapp.WeatherList
+import com.example.weather_forecast_app.R
+import com.example.weather_forecast_app.WeatherList
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -71,100 +71,44 @@ class ForeCastAdapter : RecyclerView.Adapter<ForeCastHolder>() {
             if (i.icon == "10d") {
                 holder.imageGraphic.setImageResource(R.drawable.tend)
                 holder.smallIcon.setImageResource(R.drawable.tend)
-
-
             }
-
-
             if (i.icon == "10n") {
-
                 holder.imageGraphic.setImageResource(R.drawable.tenn)
                 holder.smallIcon.setImageResource(R.drawable.tenn)
-
-
             }
-
-
             if (i.icon == "04d" || i.icon == "04n") {
-
                 holder.imageGraphic.setImageResource(R.drawable.fourdn)
                 holder.smallIcon.setImageResource(R.drawable.fourdn)
-
-
-
             }
-
-
             if (i.icon == "09d" || i.icon == "09n") {
-
                 holder.imageGraphic.setImageResource(R.drawable.ninedn)
                 holder.smallIcon.setImageResource(R.drawable.ninedn)
-
-
-
             }
-
-
             if (i.icon == "11d" || i.icon == "11n") {
-
-
                 holder.imageGraphic.setImageResource(R.drawable.elevend)
                 holder.smallIcon.setImageResource(R.drawable.elevend)
-
-
-
             }
-
-
             if (i.icon == "13d" || i.icon == "13n") {
-
                 holder.imageGraphic.setImageResource(R.drawable.thirteend)
                 holder.smallIcon.setImageResource(R.drawable.thirteend)
-
-
             }
-
             if (i.icon == "50d" || i.icon == "50n") {
-
-
                 holder.imageGraphic.setImageResource(R.drawable.fiftydn)
                 holder.smallIcon.setImageResource(R.drawable.fiftydn)
-
-
             }
-
         }
-
     }
-
-
-
-
-
     fun setList(newlist: List<WeatherList>) {
-
         this.listofforecast = newlist
 
     }
-
-
 }
-
 class ForeCastHolder(itemView: View) : ViewHolder(itemView){
-
     val imageGraphic: ImageView = itemView.findViewById(R.id.imageGraphic)
     val description : TextView = itemView.findViewById(R.id.weatherDescr)
     val humiditiy : TextView = itemView.findViewById(R.id.humidity)
     val windspeed : TextView = itemView.findViewById(R.id.windSpeed)
-
     val temp : TextView = itemView.findViewById(R.id.tempDisplayForeCast)
     val smallIcon : ImageView = itemView.findViewById(R.id.smallIcon)
-
-
     val dateDayName : TextView = itemView.findViewById(R.id.dayDateText)
-
-
-
-
-
 }

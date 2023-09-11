@@ -1,6 +1,6 @@
-package com.example.weatherapp.service
-import com.example.weatherapp.Utils
-import com.example.weatherapp.Utils.Companion.BASE_URL
+package com.example.weather_forecast_app.service
+import com.example.weather_forecast_app.Utils
+import com.example.weather_forecast_app.Utils.Companion.BASE_URL
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

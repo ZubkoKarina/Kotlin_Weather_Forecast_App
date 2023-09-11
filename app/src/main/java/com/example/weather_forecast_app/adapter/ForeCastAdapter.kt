@@ -65,42 +65,41 @@ class ForeCastAdapter : RecyclerView.Adapter<ForeCastHolder>() {
                 holder.smallIcon.setImageResource(R.drawable.ic_night_moon_moon)
             }
             if (i.icon == "03d" || i.icon == "03n") {
-                holder.imageGraphic.setImageResource(R.drawable.threedn)
-                holder.smallIcon.setImageResource(R.drawable.threedn)
+                holder.imageGraphic.setImageResource(R.drawable.ic_cloud)
+                holder.smallIcon.setImageResource(R.drawable.ic_cloud)
             }
             if (i.icon == "10d") {
-                holder.imageGraphic.setImageResource(R.drawable.tend)
-                holder.smallIcon.setImageResource(R.drawable.tend)
+                holder.imageGraphic.setImageResource(R.drawable.ic_rain_rain)
+                holder.smallIcon.setImageResource(R.drawable.ic_rain_rain)
             }
             if (i.icon == "10n") {
-                holder.imageGraphic.setImageResource(R.drawable.tenn)
-                holder.smallIcon.setImageResource(R.drawable.tenn)
+                holder.imageGraphic.setImageResource(R.drawable.ic_rain_forecast)
+                holder.smallIcon.setImageResource(R.drawable.ic_rain_forecast)
             }
             if (i.icon == "04d" || i.icon == "04n") {
-                holder.imageGraphic.setImageResource(R.drawable.fourdn)
-                holder.smallIcon.setImageResource(R.drawable.fourdn)
+                holder.imageGraphic.setImageResource(R.drawable.ic_cloudy_spring)
+                holder.smallIcon.setImageResource(R.drawable.ic_cloudy_spring)
             }
             if (i.icon == "09d" || i.icon == "09n") {
-                holder.imageGraphic.setImageResource(R.drawable.ninedn)
-                holder.smallIcon.setImageResource(R.drawable.ninedn)
+                holder.imageGraphic.setImageResource(R.drawable.ic_rain)
+                holder.smallIcon.setImageResource(R.drawable.ic_rain)
             }
             if (i.icon == "11d" || i.icon == "11n") {
-                holder.imageGraphic.setImageResource(R.drawable.elevend)
-                holder.smallIcon.setImageResource(R.drawable.elevend)
+                holder.imageGraphic.setImageResource(R.drawable.ic_storm)
+                holder.smallIcon.setImageResource(R.drawable.ic_storm)
             }
             if (i.icon == "13d" || i.icon == "13n") {
-                holder.imageGraphic.setImageResource(R.drawable.thirteend)
-                holder.smallIcon.setImageResource(R.drawable.thirteend)
+                holder.imageGraphic.setImageResource(R.drawable.ic_snowflake)
+                holder.smallIcon.setImageResource(R.drawable.ic_snowflake)
             }
             if (i.icon == "50d" || i.icon == "50n") {
-                holder.imageGraphic.setImageResource(R.drawable.fiftydn)
-                holder.smallIcon.setImageResource(R.drawable.fiftydn)
+                holder.imageGraphic.setImageResource(R.drawable.ic_tornado)
+                holder.smallIcon.setImageResource(R.drawable.ic_tornado)
             }
         }
     }
     fun setList(newlist: List<WeatherList>) {
         this.listofforecast = newlist
-
     }
 }
 class ForeCastHolder(itemView: View) : ViewHolder(itemView){

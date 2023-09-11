@@ -93,7 +93,7 @@
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:layout_marginBottom="4dp"
-                                    android:src="@drawable/rain" />
+                                    android:src="@drawable/ic_rain_jast" />
                                 <TextView
                                     android:id="@+id/chanceofrain"
                                     android:layout_width="match_parent"
@@ -123,7 +123,7 @@
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:layout_marginBottom="4dp"
-                                    android:src="@drawable/wind" />
+                                    android:src="@drawable/ic_wind" />
                                 <TextView
                                     android:id="@+id/windSpeed"
                                     android:layout_width="match_parent"
@@ -153,7 +153,7 @@
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:layout_marginBottom="4dp"
-                                    android:src="@drawable/humidity" />
+                                    android:src="@drawable/ic_humidity_rain" />
                                 <TextView
                                     android:id="@+id/humidityMain"
                                     android:layout_width="match_parent"

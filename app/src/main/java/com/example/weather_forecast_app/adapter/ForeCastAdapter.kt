@@ -1,5 +1,5 @@
-
 package com.example.weather_forecast_app.adapter
+import android.annotation.SuppressLint
 import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
@@ -29,6 +29,7 @@ class ForeCastAdapter : RecyclerView.Adapter<ForeCastHolder>() {
         return listofforecast.size
     }
 
+    @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: ForeCastHolder, position: Int) {
         val forecastObject = listofforecast[position]
@@ -48,12 +49,12 @@ class ForeCastAdapter : RecyclerView.Adapter<ForeCastHolder>() {
         holder.dateDayName.text = dateanddayname
         for (i in forecastObject.weather) {
             if (i.icon == "01d") {
-                holder.imageGraphic.setImageResource(R.drawable.oned)
-                holder.smallIcon.setImageResource(R.drawable.oned)
+                holder.imageGraphic.setImageResource(R.drawable.ic_sun)
+                holder.smallIcon.setImageResource(R.drawable.ic_sun)
             }
             if (i.icon == "01n") {
-                holder.imageGraphic.setImageResource(R.drawable.onen)
-                holder.smallIcon.setImageResource(R.drawable.onen)
+                holder.imageGraphic.setImageResource(R.drawable.ic_sun)
+                holder.smallIcon.setImageResource(R.drawable.ic_sun)
             }
             if (i.icon == "02d") {
                 holder.imageGraphic.setImageResource(R.drawable.twod)

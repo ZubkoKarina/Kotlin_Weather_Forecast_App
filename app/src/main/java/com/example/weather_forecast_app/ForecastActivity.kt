@@ -28,41 +28,12 @@ class ForeCastActivity : AppCompatActivity() {
             viM.getForecastUpcoming(city)
         } else {
             viM.getForecastUpcoming()
-
-
         }
-
-
-
-
         viM.forecastWeatherLiveData.observe(this, Observer {
-
             val setNewlist = it as List<WeatherList>
-
-
-
             Log.d("Forecast LiveData", setNewlist.toString())
-
-
-
             adapterForeCastAdapter.setList(setNewlist)
-
-
             rvForeCast.adapter = adapterForeCastAdapter
-
-
-
         })
-
-
-
-
-
     }
-
-
-
-
-
-
 }

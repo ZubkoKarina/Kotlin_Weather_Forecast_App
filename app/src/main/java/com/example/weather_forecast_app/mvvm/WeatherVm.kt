@@ -1,3 +1,4 @@
 package com.example.weather_forecast_app.mvvm
-class WeatherVm {
+import androidx.lifecycle.ViewModel
+class WeatherVm : ViewModel {
 }

@@ -27,7 +27,7 @@ class WeatherToday : RecyclerView.Adapter<TodayHolder>() {
         return listOfTodayWeather.size
     }
     @RequiresApi(Build.VERSION_CODES.O)
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "SimpleDateFormat")
     override fun onBindViewHolder(holder: TodayHolder, position: Int) {
         val todayForeCast = listOfTodayWeather[position]
         holder.timeDisplay.text = todayForeCast.dtTxt!!.substring(11, 16).toString()

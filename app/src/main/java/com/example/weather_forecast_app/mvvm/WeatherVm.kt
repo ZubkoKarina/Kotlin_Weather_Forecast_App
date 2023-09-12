@@ -46,7 +46,7 @@ class WeatherVm : ViewModel() {
             val weatherList = response.body()?.weatherList
             cityName.postValue(response.body()?.city!!.name)
             val currentDate = currentDateO
-            weatherList?.forEach { weather ->
+            weatherList?.forEach { weather: WeatherList ->
                 if (weather.dtTxt!!.split("\\s".toRegex()).contains(currentDate)) {
                     todayWeatherList.add(weather)
                 }
@@ -75,12 +75,10 @@ class WeatherVm : ViewModel() {
         if (response.isSuccessful) {
             val weatherList = response.body()?.weatherList
             val currentDate = currentDateO
-            weatherList?.forEach { weather ->
+            weatherList?.forEach { weather: WeatherList ->
                 if (!weather.dtTxt!!.split("\\s".toRegex()).contains(currentDate)) {
                     if (weather.dtTxt!!.substring(11, 16) == "12:00") {
                         forecastWeatherList.add(weather)
-
-
                     }
                 }
             }
@@ -95,11 +93,9 @@ class WeatherVm : ViewModel() {
         val systemTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm"))
         var closestWeather: WeatherList? = null
         var minTimeDifference = Int.MAX_VALUE
-
         for (weather in weatherList) {
             val weatherTime = weather.dtTxt!!.substring(11, 16)
             val timeDifference = Math.abs(timeToMinutes(weatherTime) - timeToMinutes(systemTime))
-
             if (timeDifference < minTimeDifference) {
                 minTimeDifference = timeDifference
                 closestWeather = weather

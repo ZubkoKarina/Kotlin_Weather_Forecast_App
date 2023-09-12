@@ -83,41 +83,40 @@ class MainActivity : AppCompatActivity() {
             // setting the icon
             for (i in it.weather) {
                 if (i.icon == "01d") {
-                    binding.imageMain.setImageResource(R.drawable.oned)
+                    binding.imageMain.setImageResource(R.drawable.ic_sun)
                 }
                 if (i.icon == "01n") {
-                    binding.imageMain.setImageResource(R.drawable.onen)
+                    binding.imageMain.setImageResource(R.drawable.ic_moon)
                 }
                 if (i.icon == "02d") {
-                    binding.imageMain.setImageResource(R.drawable.twod)
+                    binding.imageMain.setImageResource(R.drawable.ic_cloudy)
                 }
                 if (i.icon == "02n") {
-                    binding.imageMain.setImageResource(R.drawable.twon)
+                    binding.imageMain.setImageResource(R.drawable.ic_night_moon_moon)
                 }
                 if (i.icon == "03d" || i.icon == "03n") {
-                    binding.imageMain.setImageResource(R.drawable.threedn)
+                    binding.imageMain.setImageResource(R.drawable.ic_cloud)
                 }
                 if (i.icon == "10d") {
-                    binding.imageMain.setImageResource(R.drawable.tend)
+                    binding.imageMain.setImageResource(R.drawable.ic_rain_rain)
                 }
                 if (i.icon == "10n") {
-
-                    binding.imageMain.setImageResource(R.drawable.tenn)
+                    binding.imageMain.setImageResource(R.drawable.ic_rain_forecast)
                 }
                 if (i.icon == "04d" || i.icon == "04n") {
-                    binding.imageMain.setImageResource(R.drawable.fourdn)
+                    binding.imageMain.setImageResource(R.drawable.ic_cloudy_spring)
                 }
                 if (i.icon == "09d" || i.icon == "09n") {
-                    binding.imageMain.setImageResource(R.drawable.ninedn)
+                    binding.imageMain.setImageResource(R.drawable.ic_rain)
                 }
                 if (i.icon == "11d" || i.icon == "11n") {
-                    binding.imageMain.setImageResource(R.drawable.elevend)
+                    binding.imageMain.setImageResource(R.drawable.ic_storm)
                 }
                 if (i.icon == "13d" || i.icon == "13n") {
-                    binding.imageMain.setImageResource(R.drawable.thirteend)
+                    binding.imageMain.setImageResource(R.drawable.ic_snowflake)
                 }
                 if (i.icon == "50d" || i.icon == "50n") {
-                    binding.imageMain.setImageResource(R.drawable.fiftydn)
+                    binding.imageMain.setImageResource(R.drawable.ic_tornado)
                 }
             }
         })
@@ -132,7 +131,7 @@ class MainActivity : AppCompatActivity() {
         val searchEditText = binding.searchView.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)
         searchEditText.setTextColor(Color.WHITE)
         binding.next5Days.setOnClickListener {
-            startActivity(Intent(this, ForeCastActivity::class.java))
+            startActivity(Intent(this, ForecastActivity::class.java))
         }
         binding.searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {

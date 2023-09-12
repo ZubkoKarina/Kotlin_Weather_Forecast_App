@@ -17,7 +17,6 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
-
 class ForeCastAdapter : RecyclerView.Adapter<ForeCastHolder>() {
     private var listofforecast = listOf<WeatherList>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ForeCastHolder {
@@ -28,7 +27,6 @@ class ForeCastAdapter : RecyclerView.Adapter<ForeCastHolder>() {
     override fun getItemCount(): Int {
         return listofforecast.size
     }
-
     @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: ForeCastHolder, position: Int) {

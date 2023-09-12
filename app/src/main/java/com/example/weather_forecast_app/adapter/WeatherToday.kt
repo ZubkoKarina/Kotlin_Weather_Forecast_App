@@ -44,40 +44,40 @@ class WeatherToday : RecyclerView.Adapter<TodayHolder>() {
         Log.e("time" , " formatted time:${formattedTime}, timeofapi: ${partafterspace}")
         for ( i in todayForeCast.weather){
             if (i.icon == "01d") {
-                holder.imageDisplay.setImageResource(R.drawable.oned)
+                holder.imageDisplay.setImageResource(R.drawable.ic_sun)
             }
             if (i.icon == "01n") {
-                holder.imageDisplay.setImageResource(R.drawable.onen)
+                holder.imageDisplay.setImageResource(R.drawable.ic_moon)
             }
             if (i.icon == "02d") {
-                holder.imageDisplay.setImageResource(R.drawable.twod)
+                holder.imageDisplay.setImageResource(R.drawable.ic_cloudy)
             }
             if (i.icon == "02n") {
-                holder.imageDisplay.setImageResource(R.drawable.twon)
+                holder.imageDisplay.setImageResource(R.drawable.ic_night_moon_moon)
             }
             if (i.icon == "03d" || i.icon == "03n") {
-                holder.imageDisplay.setImageResource(R.drawable.threedn)
+                holder.imageDisplay.setImageResource(R.drawable.ic_cloud)
             }
             if (i.icon == "10d") {
-                holder.imageDisplay.setImageResource(R.drawable.tend)
+                holder.imageDisplay.setImageResource(R.drawable.ic_rain_rain)
             }
             if (i.icon == "10n") {
-                holder.imageDisplay.setImageResource(R.drawable.tenn)
+                holder.imageDisplay.setImageResource(R.drawable.ic_rain_forecast)
             }
             if (i.icon == "04d" || i.icon == "04n") {
-                holder.imageDisplay.setImageResource(R.drawable.fourdn)
+                holder.imageDisplay.setImageResource(R.drawable.ic_cloudy_spring)
             }
             if (i.icon == "09d" || i.icon == "09n") {
-                holder.imageDisplay.setImageResource(R.drawable.ninedn)
+                holder.imageDisplay.setImageResource(R.drawable.ic_rain)
             }
             if (i.icon == "11d" || i.icon == "11n") {
-                holder.imageDisplay.setImageResource(R.drawable.elevend)
+                holder.imageDisplay.setImageResource(R.drawable.ic_storm)
             }
             if (i.icon == "13d" || i.icon == "13n") {
-                holder.imageDisplay.setImageResource(R.drawable.thirteend)
+                holder.imageDisplay.setImageResource(R.drawable.ic_snowflake)
             }
             if (i.icon == "50d" || i.icon == "50n") {
-                holder.imageDisplay.setImageResource(R.drawable.fiftydn)
+                holder.imageDisplay.setImageResource(R.drawable.ic_tornado)
             }
         }
     }

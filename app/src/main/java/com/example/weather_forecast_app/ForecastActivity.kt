@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weather_forecast_app.adapter.ForeCastAdapter
 import com.example.weather_forecast_app.mvvm.WeatherVm
-class ForeCastActivity : AppCompatActivity() {
+class ForecastActivity : AppCompatActivity() {
     private lateinit var adapterForeCastAdapter: ForeCastAdapter
     lateinit var viM : WeatherVm
     lateinit var rvForeCast: RecyclerView

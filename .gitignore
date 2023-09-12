@@ -13,4 +13,4 @@
 .externalNativeBuild
 .cxx
 local.properties
-/home/karina/AndroidStudioProjects/Weather_Forecast_app/app/src/main/java/com/example/weather_forecast_app/Utils.kt
+/app/src/main/java/com/example/weather_forecast_app/Utils.kt

@@ -147,14 +147,8 @@ class MainActivity : AppCompatActivity() {
         }
         val searchEditText = binding.searchView.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)
         searchEditText.setTextColor(Color.BLACK)
-        binding.searchView.setOnQueryTextFocusChangeListener { _, hasFocus ->
-            if (hasFocus) {
-                searchEditText.layoutParams.width = 200
-                searchEditText.requestLayout()
-            } else {
-                searchEditText.layoutParams.width = ViewGroup.LayoutParams.WRAP_CONTENT
-                searchEditText.requestLayout()
-            }
+        binding.next5Days.setOnClickListener {
+            startActivity(Intent(this, ForecastActivity::class.java))
         }
         binding.searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -172,6 +166,15 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
         })
+        binding.searchView.setOnSearchClickListener {
+            binding.searchView.layoutParams.width = 500
+            binding.searchView.requestLayout()
+        }
+        binding.searchView.setOnCloseListener {
+            binding.searchView.layoutParams.width = ViewGroup.LayoutParams.WRAP_CONTENT
+            binding.searchView.requestLayout()
+            false
+        }
 
     }
 

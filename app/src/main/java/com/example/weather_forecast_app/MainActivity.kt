@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
             binding.forecastRecyclerView.adapter = adapter
         })
         binding.lifecycleOwner = this
-        binding.vm = viM
+        binding.mVm = viM
         viM.closetorexactlysameweatherdata.observe(this, Observer {
             val temperatureFahrenheit = it!!.main?.temp
             val temperatureCelsius = (temperatureFahrenheit?.minus(273.15))
@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
             binding.windSpeed.text = it.wind?.speed.toString()
             val inputFormat = SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault())
             val date = inputFormat.parse(it.dtTxt!!)
-            val outputFormat = SimpleDateFormat("d MMMM EEEE", Locale.getDefault())
+            val outputFormat = SimpleDateFormat("EEE, MMM d, yyyy", Locale.ENGLISH)
             val dateanddayname = outputFormat.format(date!!)
             binding.dateDayMain.text = dateanddayname
             binding.chanceofrain.text = "${it.pop.toString()}%"

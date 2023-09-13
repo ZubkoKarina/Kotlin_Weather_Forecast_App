@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
+import android.content.res.Resources
 import android.graphics.Color
 import android.location.Geocoder
 import android.location.Location
@@ -167,7 +168,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
         binding.searchView.setOnSearchClickListener {
-            binding.searchView.layoutParams.width = 500
+            binding.searchView.layoutParams.width = 970
             binding.searchView.requestLayout()
         }
         binding.searchView.setOnCloseListener {
@@ -176,9 +177,12 @@ class MainActivity : AppCompatActivity() {
             false
         }
 
+        val cityNameTextView = binding.cityName
+        val params = cityNameTextView.layoutParams as ViewGroup.MarginLayoutParams
+        params.setMargins(30.dpToPx(), params.topMargin, params.rightMargin, params.bottomMargin)
+        cityNameTextView.layoutParams = params
+
     }
-
-
     private fun checkLocationPermissions(): Boolean {
         val fineLocationPermission = ContextCompat.checkSelfPermission(
             this,
@@ -191,7 +195,11 @@ class MainActivity : AppCompatActivity() {
         return fineLocationPermission == PackageManager.PERMISSION_GRANTED &&
                 coarseLocationPermission == PackageManager.PERMISSION_GRANTED
     }
-    // Function to request location permissions
+    fun Int.dpToPx(): Int {
+        val density = Resources.getSystem().displayMetrics.density
+        return (this * density).toInt()
+    }
+
     private fun requestLocationPermissions() {
         ActivityCompat.requestPermissions(
             this,

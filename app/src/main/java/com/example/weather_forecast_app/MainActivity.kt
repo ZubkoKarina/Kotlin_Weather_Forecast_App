@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.graphics.Color
 import android.location.Geocoder
 import android.location.Location
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.ViewGroup
 import android.view.WindowInsets
 import android.view.WindowInsetsController
 import android.view.WindowManager
@@ -144,9 +146,15 @@ class MainActivity : AppCompatActivity() {
             requestLocationPermissions()
         }
         val searchEditText = binding.searchView.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)
-        searchEditText.setTextColor(Color.WHITE)
-        binding.next5Days.setOnClickListener {
-            startActivity(Intent(this, ForecastActivity::class.java))
+        searchEditText.setTextColor(Color.BLACK)
+        binding.searchView.setOnQueryTextFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                searchEditText.layoutParams.width = 200
+                searchEditText.requestLayout()
+            } else {
+                searchEditText.layoutParams.width = ViewGroup.LayoutParams.WRAP_CONTENT
+                searchEditText.requestLayout()
+            }
         }
         binding.searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -164,7 +172,10 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
         })
+
     }
+
+
     private fun checkLocationPermissions(): Boolean {
         val fineLocationPermission = ContextCompat.checkSelfPermission(
             this,

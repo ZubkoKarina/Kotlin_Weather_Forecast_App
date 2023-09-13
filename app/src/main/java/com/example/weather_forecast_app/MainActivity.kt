@@ -87,7 +87,13 @@ class MainActivity : AppCompatActivity() {
             val temperatureCelsius = (temperatureFahrenheit?.minus(273.15))
             val temperatureFormatted = String.format("%.2f", temperatureCelsius)
             for (i in it.weather) {
-                binding.descMain.text = i.description
+                val description = i.description
+                if (description != null && description.isNotEmpty()) {
+                    val capitalizedDescription = description.substring(0, 1).toUpperCase() + description.substring(1)
+                    binding.descMain.text = capitalizedDescription
+                } else {
+                    binding.descMain.text = ""
+                }
             }
             binding.tempMain.text = "$temperatureFormatted°"
             binding.humidityMain.text = it.main!!.humidity.toString()

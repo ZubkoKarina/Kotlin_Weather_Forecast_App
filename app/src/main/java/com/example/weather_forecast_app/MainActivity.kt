@@ -4,12 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.content.res.Configuration
 import android.content.res.Resources
 import android.graphics.Color
 import android.location.Geocoder
 import android.location.Location
-import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -17,12 +15,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowInsets
-import android.view.WindowInsetsController
 import android.view.WindowManager
 import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
@@ -31,24 +25,11 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.RecyclerView
-import com.example.weather_forecast_app.Utils.Companion.PERMISSION_REQUEST_CODE
-import com.example.weather_forecast_app.adapter.ForeCastAdapter
 import com.example.weather_forecast_app.adapter.WeatherToday
 import com.example.weather_forecast_app.databinding.TestlayoutBinding
 import com.example.weather_forecast_app.mvvm.WeatherVm
-import com.example.weather_forecast_app.service.RetrofitInstance
-import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.util.*
-
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
     lateinit var viM: WeatherVm

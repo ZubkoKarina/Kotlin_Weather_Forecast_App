@@ -11,10 +11,8 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weather_forecast_app.R
 import com.example.weather_forecast_app.WeatherList
-import java.lang.Math.abs
 import java.text.SimpleDateFormat
 import java.time.*
-import java.time.format.DateTimeFormatter
 import java.util.*
 class WeatherToday : RecyclerView.Adapter<TodayHolder>() {
     private var listOfTodayWeather = listOf<WeatherList>()
@@ -30,18 +28,17 @@ class WeatherToday : RecyclerView.Adapter<TodayHolder>() {
     @SuppressLint("SetTextI18n", "SimpleDateFormat")
     override fun onBindViewHolder(holder: TodayHolder, position: Int) {
         val todayForeCast = listOfTodayWeather[position]
-        holder.timeDisplay.text = todayForeCast.dtTxt!!.substring(11, 16).toString()
+        holder.timeDisplay.text = todayForeCast.dtTxt!!.substring(11, 16)
         val temperatureFahrenheit = todayForeCast.main?.temp
         val temperatureCelsius = (temperatureFahrenheit?.minus(273.15))
         val temperatureFormatted = String.format("%.2f", temperatureCelsius)
         holder.tempDisplay.text = "$temperatureFormatted °C"
         val calendar = Calendar.getInstance()
-// Define the desired format
         val dateFormat = SimpleDateFormat("HH::mm")
         val formattedTime = dateFormat.format(calendar.time)
         val timeofapi = todayForeCast.dtTxt!!.split(" ")
         val partafterspace = timeofapi[1]
-        Log.e("time" , " formatted time:${formattedTime}, timeofapi: ${partafterspace}")
+        Log.e("time" , " formatted time:${formattedTime}, timeofapi: $partafterspace")
         for ( i in todayForeCast.weather){
             if (i.icon == "01d") {
                 holder.imageDisplay.setImageResource(R.drawable.ic_sun)

@@ -2,7 +2,6 @@ package com.example.weather_forecast_app
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
-
 class SharedPrefs internal constructor(private val context: Context) {
     companion object {
         private const val SHARED_PREFS_NAME = "my_prefs"

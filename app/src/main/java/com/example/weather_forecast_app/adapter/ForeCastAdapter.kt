@@ -1,7 +1,6 @@
 package com.example.weather_forecast_app.adapter
 import android.annotation.SuppressLint
 import android.os.Build
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,9 +12,6 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.weather_forecast_app.R
 import com.example.weather_forecast_app.WeatherList
 import java.text.SimpleDateFormat
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 import java.util.*
 class ForeCastAdapter : RecyclerView.Adapter<ForeCastHolder>() {
     private var listofforecast = listOf<WeatherList>()
@@ -42,8 +38,8 @@ class ForeCastAdapter : RecyclerView.Adapter<ForeCastHolder>() {
         holder.temp.text = "$temperatureFormatted °C"
         val inputFormat = SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault())
         val date = inputFormat.parse(forecastObject.dtTxt!!)
-        val outputFormat = SimpleDateFormat("d MMMM EEEE", Locale.getDefault())
-         val dateanddayname = outputFormat.format(date!!)
+        val outputFormat = SimpleDateFormat("EEE, MMM d, yyyy", Locale.ENGLISH)
+        val dateanddayname = outputFormat.format(date!!)
         holder.dateDayName.text = dateanddayname
         for (i in forecastObject.weather) {
             if (i.icon == "01d") {

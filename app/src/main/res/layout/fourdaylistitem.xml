@@ -1,35 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:backgroundTint="#80A9A9A9"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="10dp">
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/myWhiteWindow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_background"
+        android:paddingStart="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp">
+
         <RelativeLayout
             android:id="@+id/rel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp">
+
             <TextView
                 android:id="@+id/dayDateText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="27th May, Mon"
-                android:textColor="@android:color/white"
-                android:textSize="15sp"
-                android:textStyle="italic" />
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
             <ImageView
                 android:id="@+id/imageGraphic"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="18dp"
                 android:src="@drawable/ic_sun" />
+
             <TextView
                 android:id="@+id/tempDisplayForeCast"
                 android:layout_width="wrap_content"
@@ -37,9 +53,10 @@
                 android:layout_below="@id/imageGraphic"
                 android:layout_centerHorizontal="true"
                 android:text="20 C"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/black"
                 android:textSize="20sp" />
         </RelativeLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,32 +64,36 @@
             android:layout_marginStart="4dp"
             android:layout_toEndOf="@id/rel"
             android:orientation="horizontal">
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
                     android:id="@+id/smallIcon"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginBottom="4dp"
                     android:src="@drawable/ic_sun" />
+
                 <TextView
                     android:id="@+id/weatherDescr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Overcast"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
             </LinearLayout>
+
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-
                 android:layout_margin="4dp"
-                android:background="@android:color/white" />
+                android:textColor="@android:color/black" />
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -80,56 +101,63 @@
                 android:gravity="center"
 
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginBottom="4dp"
                     android:src="@drawable/ic_wind" />
+
                 <TextView
                     android:id="@+id/windSpeed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="10%"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Wind Speed"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
             </LinearLayout>
+
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
-                android:background="@android:color/white" />
+                android:textColor="@android:color/black" />
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginBottom="4dp"
                     android:src="@drawable/ic_humidity_rain" />
+
                 <TextView
                     android:id="@+id/humidity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="10%"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Humidity"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
-</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

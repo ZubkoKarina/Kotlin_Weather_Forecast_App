@@ -13,20 +13,29 @@
         android:background="@color/medium_gray">
 
         <LinearLayout
-            android:id="@+id/myWhiteWindow"
             android:layout_width="match_parent"
-            android:layout_height="414dp"
-            android:orientation="vertical"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/myWhiteWindow"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="10dp"
+                android:layout_height="400dp"
                 android:background="@drawable/white_background"
-                android:paddingStart="10dp" />
+                android:paddingStart="10dp"
+                android:paddingBottom="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/searchView"

@@ -66,14 +66,6 @@ class MainActivity : AppCompatActivity() {
             attributes.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
             window.attributes = attributes
         }
-
-
-
-
-
-
-
-
         binding = DataBindingUtil.setContentView(this, R.layout.testlayout)
         viM = ViewModelProvider(this).get(WeatherVm::class.java)
         viM.getWeather()

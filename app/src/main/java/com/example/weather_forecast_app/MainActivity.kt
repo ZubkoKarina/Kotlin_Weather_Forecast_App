@@ -85,7 +85,6 @@ class MainActivity : AppCompatActivity() {
             val dateanddayname = outputFormat.format(date!!)
             binding.dateDayMain.text = dateanddayname
             binding.chanceofrain.text = "${it.pop.toString()}%"
-            // setting the icon
             for (i in it.weather) {
                 if (i.icon == "01d") {
                     binding.imageMain.setImageResource(R.drawable.ic_sun)

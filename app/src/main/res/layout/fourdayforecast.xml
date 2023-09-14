@@ -39,14 +39,12 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
     </LinearLayout>
 
-    <ImageView
+    <TextView
         android:id="@+id/ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="35dp"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/ic_swipe_right"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Swipe right to go back >"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

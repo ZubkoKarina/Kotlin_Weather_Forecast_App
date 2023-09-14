@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
@@ -11,6 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/medium_gray">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
@@ -63,11 +70,11 @@
 
             <ImageView
                 android:id="@+id/imageMain"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="30dp"
                 android:outlineProvider="bounds"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -90,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:textColor="@android:color/black"
@@ -105,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginBottom="20dp"
                 android:textColor="@android:color/black"
                 android:textSize="50sp"

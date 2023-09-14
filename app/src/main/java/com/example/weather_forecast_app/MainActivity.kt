@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             for (i in it.weather) {
                 val description = i.description
                 if (description != null && description.isNotEmpty()) {
-                    val capitalizedDescription = description.substring(0, 1).toUpperCase() + description.substring(1)
+                    val capitalizedDescription = description.substring(0, 1).toUpperCase(Locale.ROOT) + description.substring(1)
                     binding.descMain.text = capitalizedDescription
                 } else {
                     binding.descMain.text = ""
